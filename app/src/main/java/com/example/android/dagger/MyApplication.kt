@@ -25,8 +25,10 @@ import com.example.android.dagger.user.UserManager
 open class MyApplication : Application() {
 
     val appComponent: AppComponent by lazy {
-        DaggerAppComponent.factory().create(applicationContext)
+        initializeComponent()
     }
+
+    open fun initializeComponent() = DaggerAppComponent.factory().create(applicationContext)
 
 //    open val userManager by lazy {
 //        UserManager(SharedPreferencesStorage(this))
