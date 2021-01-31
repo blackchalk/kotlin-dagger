@@ -8,6 +8,7 @@ import com.example.android.dagger.registration.di.RegistrationComponent
 import com.example.android.dagger.registration.enterdetails.EnterDetailsFragment
 import com.example.android.dagger.registration.termsandconditions.TermsAndConditionsFragment
 import com.example.android.dagger.settings.SettingsActivity
+import com.example.android.dagger.splash.di.SplashComponent
 import com.example.android.dagger.user.UserManager
 import dagger.BindsInstance
 import dagger.Component
@@ -27,6 +28,7 @@ interface AppComponent {
     fun userManager(): UserManager
 
     // Expose RegistrationComponent factory from the graph
+    fun splashComponent(): SplashComponent.Factory
     fun registrationComponent(): RegistrationComponent.Factory
     fun loginComponent(): LoginComponent.Factory
 }
